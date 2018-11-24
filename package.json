@@ -12,7 +12,6 @@
   },
   "scripts": {
     "test": "jest",
-    "install": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp rebuild",
     "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build"
   },
   "keywords": [],
