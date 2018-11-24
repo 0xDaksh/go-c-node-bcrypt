@@ -1,0 +1,19 @@
+{
+  "name": "nbcrypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-gyp": "^3.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild",
+    "build": "node-gyp configure build"
+  },
+  "keywords": [],
+  "author": "Daksh Miglani <hello@dak.sh> https://dak.sh",
+  "license": "MIT",
+  "gypfile": true
+}
