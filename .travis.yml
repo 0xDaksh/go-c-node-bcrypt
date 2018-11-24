@@ -2,5 +2,13 @@ language: go
 go:
   - "1.10"
 node_js: "10.8.0"
-install: "npm install && go get -v golang.org/x/crypto/bcrypt"
-script: "npm run build && npm test"
+
+before_script:
+  - go get -t -v golang.org/x/crypto/bcrypt
+
+install:
+  - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
+  - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
+  - npm install
+  - npm run build
+script: "npm test"
