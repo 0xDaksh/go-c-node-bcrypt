@@ -1,4 +1,4 @@
-language: gp
+language: go
 go:
   - "1.10"
 node_js: "10.8.0"
