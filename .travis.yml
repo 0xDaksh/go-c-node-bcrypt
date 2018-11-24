@@ -2,5 +2,5 @@ language: go
 go:
   - "1.10"
 node_js: "10.8.0"
-install: "npm install"
+install: "npm install && go get -v golang.org/x/crypto/bcrypt"
 script: "npm run build && npm test"
