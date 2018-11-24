@@ -7,12 +7,13 @@
     "jest": "^23.6.0",
     "node-gyp": "^3.8.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bcryptjs": "^2.4.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "install": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp rebuild",
-    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build",
-    "test": "jest"
+    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build"
   },
   "keywords": [],
   "author": "Daksh Miglani <hello@dak.sh> https://dak.sh",
