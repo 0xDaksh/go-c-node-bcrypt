@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "jest": "^23.6.0",
     "node-gyp": "^3.8.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp rebuild",
-    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build"
+    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Daksh Miglani <hello@dak.sh> https://dak.sh",
