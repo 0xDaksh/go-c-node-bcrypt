@@ -9,8 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node-gyp rebuild",
-    "build": "node-gyp configure build"
+    "install": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp rebuild",
+    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build"
   },
   "keywords": [],
   "author": "Daksh Miglani <hello@dak.sh> https://dak.sh",
