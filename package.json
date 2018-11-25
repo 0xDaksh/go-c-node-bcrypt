@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build"
+    "build": "go build -o bcrypt.so -buildmode=c-shared bcrypt.go && node-gyp configure build",
+    "install": "node-gyp rebuild"
   },
   "keywords": [],
   "author": "Daksh Miglani <hello@dak.sh> https://dak.sh",
