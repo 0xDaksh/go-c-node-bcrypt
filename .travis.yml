@@ -3,12 +3,10 @@ go:
   - "1.10"
 node_js: "10.8.0"
 
-before_script:
-  - go get -t -v golang.org/x/crypto/bcrypt
-
 install:
   - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
   - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
+  - go get -t -v golang.org/x/crypto/bcrypt
   - go build -o bcrypt.so -buildmode=c-shared bcrypt.go
   - npm install
   - npm run build
